@@ -18,7 +18,10 @@
         Encontre seu endereço:
         <span>Digite seu CEP e te buscaremos seu endereço.</span>
         <div id="inputs"> 
-            <input type="text" name="cepinput" id="cepinput" placeholder="Digite seu cep aqui..."> <input type="button" value="ENCONTRAR" id="botaoenviar" name="ENCONTRAR">
+            <form action="{% url 'cepapp:home' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="cepinput" id="cepinput" placeholder="Digite seu cep aqui..."> <input type="submit" value="ENCONTRAR" id="botaoenviar" name="ENCONTRAR">
+            </form>
         </div>
     </div>
 
