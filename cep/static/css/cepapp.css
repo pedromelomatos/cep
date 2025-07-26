@@ -13,10 +13,18 @@ html{
 
     height: 100vh;
     text-shadow: 
-        -2px -2px 0 black,
-         2px -2px 0 black,
-        -2px 2px 0 black,
-         2px 2px 0 black;
+        -1px -1px 0 black,
+         0px -1px 0 black,
+         1px -1px 0 black,
+        -1px  0px 0 black,
+         1px  0px 0 black,
+        -1px  1px 0 black,
+         0px  1px 0 black,
+         1px  1px 0 black,
+        -2px  0px 0 black,
+         2px  0px 0 black,
+         0px -2px 0 black,
+         0px  2px 0 black;
 }
 
 #central span{
@@ -49,4 +57,19 @@ html{
     gap: 20px;
     justify-content: space-between;
     width: 100%;
+}
+
+#infosusuario{
+    background-color: rgb(218, 218, 218);
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    border-radius: 50px;
+    border: solid 2px black;
+    width: 60%;
+    padding: 50px;
+}
+
+#infosusuario span{
+    font-size: 30px;
 }

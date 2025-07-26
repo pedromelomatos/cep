@@ -11,5 +11,4 @@ def home(request:HttpRequest):
         url = f'https://viacep.com.br/ws/{inputcep}/json/'
         request_cep = requests.get(url)
         infos_endereco = request_cep.json()
-        print(f'Rua: {infos_endereco['logradouro']}\nEstado: {infos_endereco['estado']}\nCidade: {infos_endereco['localidade']}')
-        return render(request, 'home.html')
+        return render(request, 'home.html', {'infos_endereco': infos_endereco})

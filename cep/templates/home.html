@@ -23,6 +23,14 @@
             <input type="text" name="cepinput" id="cepinput" placeholder="Digite seu cep aqui..."> <input type="submit" value="ENCONTRAR" id="botaoenviar" name="ENCONTRAR">
             </form>
         </div>
+        <div id="infosusuario">
+        {% if infos_endereco %}
+            <span>Rua: {{infos_endereco.logradouro}}</span>
+            <span>Bairro: {{infos_endereco.bairro}}</span>
+            <span>Cidade: {{infos_endereco.localidade}}</span>
+            <span>Estado: {{infos_endereco.estado}}</span>
+        {% endif %}
+        </div>
     </div>
 
     
