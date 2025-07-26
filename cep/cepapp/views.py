@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from django.http import HttpRequest
-
+import requests
 # Create your views here.
 
 def home(request:HttpRequest):
@@ -8,6 +8,8 @@ def home(request:HttpRequest):
         return render(request, 'home.html')
     elif request.method == 'POST':
         inputcep = request.POST.get('cepinput') #pegando as infos do nosso input que veio do post lá do HTML
-        infos_endereco = f'viacep.com.br/ws/{inputcep}/json/'
-        print(infos_endereco)
+        url = f'https://viacep.com.br/ws/{inputcep}/json/'
+        request_cep = requests.get(url)
+        infos_endereco = request_cep.json()
+        print(f'Rua: {infos_endereco['logradouro']}\nEstado: {infos_endereco['estado']}\nCidade: {infos_endereco['localidade']}')
         return render(request, 'home.html')
