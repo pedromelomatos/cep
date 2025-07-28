@@ -4,7 +4,7 @@ Este é um projeto simples feito com Django que permite ao usuário digitar um C
 
 ### 📷 Demonstração
 
-![Demonstração do projeto](static/imagens/print-do-projeto.png)
+![Demonstração do projeto](cep/static/imagens/print-do-projeto.png)
 *Interface da aplicação ao buscar um CEP.*
 
 
