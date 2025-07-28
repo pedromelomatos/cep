@@ -65,7 +65,7 @@ html{
     flex-direction: column;
     margin-top: 40px;
     border-radius: 50px;
-    border: solid 2px black;
+    border: solid 4px black;
     width: 60%;
     padding: 50px;
 }
